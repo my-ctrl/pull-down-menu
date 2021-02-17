@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>伪元素选择器before和after</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+      }
+      /* div::before 权重是2 */
+      div::before {
+        /* content: "";
+        background-color: purple;
+        background-image: url(./箭头\ 上.png);
+        width: 100%;
+        height: 100%; */
+
+        content: "";
+        /* background: url(./箭头\ 上.png) no-repeat; */
+        background-size: 19px 24px;
+        width: 19px;
+        height: 24px;
+        position: absolute;
+        left: 20px;
+        top: 25%;
+
+        /*  */
+        background-color: purple;
+        background-image: url(./箭头\ 上.png);
+      }
+      div::after {
+        content: "小猪佩奇";
+      }
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>是</div>
+    <!-- <img src="./箭头 上.png" alt="" /> -->
+  </body>
+</html>
